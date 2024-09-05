@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root {
+
+--Softblue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+--Verydarkblue1 : hsl(217, 54%, 11%);
+--Verydarkblue2 : hsl(216, 50%, 16%);
+--Verydarkblue3 : hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Verydarkblue1);
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Outfit" , sans-serif;
+    color: var(--Softblue);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+
+    
+}
+.image img {
+    width: 100%;
+
+
+   
+}
+.card {
+    background-color: var(--Verydarkblue2);
+    margin: 50px 20px;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 280px;
+    
+
+}
+
+h1 {
+    color: var(--White);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.info span {
+    display: flex;
+    align-items: center;
+}
+
+.eth-info {
+    color: var(--Cyan);
+    
+}
+
+.eth-info img, .clock-info img {
+    margin-right: 6px;
+    
+}
+
+hr { 
+    
+    border: none;
+    border-top: 1px solid var(--Verydarkblue3);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+
+}
+
+.creator img {
+    border : 1px solid white;
+    border-radius: 50%;
+    width:30px;
+    height: 30px;
+    margin-right:18px ;
+}
+
+.name {
+    color: white;
+}
+
+
+h1:hover , .name:hover {
+    color:var(--Cyan);
+    cursor: pointer;
+
+
+}
+
+
+.overlay {
+    position: absolute;
+    width:100%;
+    height: 280px;
+    background-color:hsl(178deg 100% 50% / 50%);
+    opacity: 0;
+    
+
+    
+}
+
+.overlay:hover {
+
+    opacity: 1;
+
+}
+.image{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 280px;
+
+}
+
+
+
+.overlay::after {
+    content:"";
+    position: absolute;
+     width:50px;
+    height:50px;
+    background-image: url(/images/icon-view.svg);
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    
+    
+
+
+} 
